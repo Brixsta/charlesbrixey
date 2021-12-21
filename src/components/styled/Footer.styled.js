@@ -11,7 +11,6 @@ const Styles = styled.div`
         background-color: steelblue;
         height: 200px;
         width: 100vw;
-        font-size: 5rem;
         color: #021c37;
         display: flex;
         justify-content: center;
@@ -27,6 +26,22 @@ const Styles = styled.div`
         border: solid 10px #021c37;
         display: flex;
         padding: 1rem;
+        font-size: 5rem;
+    }
+
+    @media only screen and (max-width: 510px) {
+        svg {
+            margin: 0rem 1rem;
+        }
+
+        .col {
+            font-size: 4rem;
+        }
+    }
+    @media only screen and (max-width: 360px) {
+        .col {
+            font-size: 3rem;
+        }
     }
 `
 
@@ -35,9 +50,30 @@ export const Footer = () => (
         <Container fluid>
             <Row>
                 <Col>
-                    <AiFillGithub></AiFillGithub>
-                    <AiFillFacebook></AiFillFacebook>
-                    <AiFillLinkedin></AiFillLinkedin>
+                    <AiFillGithub
+                        onClick={() =>
+                            window.open(
+                                `https://www.github.com/Brixsta`,
+                                '_blank'
+                            )
+                        }
+                    ></AiFillGithub>
+                    <AiFillFacebook
+                        onClick={() =>
+                            window.open(
+                                `https://www.facebook.com/charles.brixey.9`,
+                                '_blank'
+                            )
+                        }
+                    ></AiFillFacebook>
+                    <AiFillLinkedin
+                        onClick={() =>
+                            window.open(
+                                `https://www.linkedin.com/in/charles-brixey-53144680/`,
+                                '_blank'
+                            )
+                        }
+                    ></AiFillLinkedin>
                 </Col>
             </Row>
         </Container>

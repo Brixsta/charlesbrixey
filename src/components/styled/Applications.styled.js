@@ -63,13 +63,10 @@ export const Styles = styled.div`
         transition: all 300ms ease-in-out;
         overflow: hidden;
         z-index: 100;
+        padding: 1.2rem;
     }
     .card:hover {
-        transform: scale(0.95);
-    }
-
-    .card img {
-        border-radius: 0px;
+        transform: scale(0.9);
     }
 
     .card-title {
@@ -89,6 +86,10 @@ export const Styles = styled.div`
         box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
     }
 
+    img {
+        border-radius: 0;
+    }
+
     .card-text {
         text-align: center;
         margin-top: 1rem;
@@ -98,6 +99,9 @@ export const Styles = styled.div`
     @media only screen and (max-width: 991px) {
         .card {
             margin-bottom: 3rem;
+        }
+        .last-card {
+            margin-bottom: 0rem;
         }
     }
 
@@ -122,6 +126,8 @@ export const Styles = styled.div`
     @media only screen and (max-width: 450px) {
         .applications-title {
             font-size: 1rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
         }
     }
 
@@ -166,7 +172,7 @@ export const Applications = () => (
                     <Card style={{ width: '25em' }}>
                         <Card.Img variant="top" src="./images/Memory.png" />
                         <Card.Body>
-                            <Card.Title>WWF Memory</Card.Title>
+                            <Card.Title>WWF MEMORY</Card.Title>
                             <Card.Text>
                                 Memory Game written to vanilla JS.
                             </Card.Text>
@@ -183,7 +189,7 @@ export const Applications = () => (
                     <Card style={{ width: '25em' }}>
                         <Card.Img variant="top" src="./images/Employee.png" />
                         <Card.Body>
-                            <Card.Title>Employee Finder</Card.Title>
+                            <Card.Title>EMPLOYEE FINDER</Card.Title>
                             <Card.Text>
                                 Employee connection app utilizing React and D3.
                             </Card.Text>
@@ -200,7 +206,7 @@ export const Applications = () => (
                     <Card style={{ width: '25em' }} className={'last-card'}>
                         <Card.Img variant="top" src="./images/Old.png" />
                         <Card.Body>
-                            <Card.Title>My Old Website</Card.Title>
+                            <Card.Title>MY OLD WEBSITE</Card.Title>
                             <Card.Text>Got to start somewhere right?</Card.Text>
                         </Card.Body>
                     </Card>

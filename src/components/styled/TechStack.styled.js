@@ -74,7 +74,8 @@ const Styles = styled.div`
         align-items: center;
         flex-direction: column;
         padding-top: 0.5rem;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.9rem;
     }
 
     .techstack-bar-content {
@@ -92,9 +93,22 @@ const Styles = styled.div`
         margin-top: 0.2rem;
     }
 
+    .last-bar {
+        margin-bottom: 0;
+    }
+    @media only screen and (max-width: 768px) {
+        .square-title {
+            font-size: 0.8rem;
+        }
+
+        .techstack-bar-content {
+            font-size: 1rem;
+        }
+    }
+
     @media only screen and (max-width: 550px) {
         .square-title {
-            font-size: 0.9rem;
+            font-size: 0.7rem;
         }
         .techstack-title {
             font-size: 2rem;
@@ -107,14 +121,16 @@ const Styles = styled.div`
         .techstack-square {
             width: 40%;
         }
-        .square-title {
-            font-size: 0.9rem;
-        }
+
         .techstack-bar-content {
             font-size: 1rem;
         }
-    }
-    @media only screen and (max-width: 450px) {
+
+        .techstack-title {
+            font-size: 1rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
         .techstack-bar-content {
             width: 55%;
         }
@@ -158,10 +174,10 @@ export const TechStack = () => (
                             >
                                 <FaPalette></FaPalette>
                             </IconContext.Provider>
-                            <span className={'square-title'}>Frontend</span>
+                            <span className={'square-title'}>FRONTEND</span>
                         </div>
                         <div className={'techstack-bar-content'}>
-                            Javascript, HTML 5, CSS.
+                            Javascript, UI/UX, HTML 5, CSS.
                         </div>
                     </div>
                 </Col>
@@ -181,7 +197,7 @@ export const TechStack = () => (
                             >
                                 <VscServerEnvironment></VscServerEnvironment>
                             </IconContext.Provider>
-                            <span className={'square-title'}>Backend</span>
+                            <span className={'square-title'}>BACKEND</span>
                         </div>
                         <div className={'techstack-bar-content'}>
                             NodeJS, ExpressJS, SQL, Postgres.
@@ -197,14 +213,14 @@ export const TechStack = () => (
                         'd-flex align-items-center justify-content-center'
                     }
                 >
-                    <div className={'techstack-bar'}>
+                    <div className={'techstack-bar last-bar'}>
                         <div className={'techstack-square'}>
                             <IconContext.Provider
                                 value={{ color: 'white', size: '40%' }}
                             >
                                 <SiMaterialdesignicons></SiMaterialdesignicons>
                             </IconContext.Provider>
-                            <span className={'square-title'}>Frameworks</span>
+                            <span className={'square-title'}>FRAMEWORKS</span>
                         </div>
                         <div className={'techstack-bar-content'}>
                             React, D3, Bootstrap.

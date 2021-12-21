@@ -11,7 +11,6 @@ export const Styles = styled.div`
         align-items: center;
         justify-content: center;
         width: 100vw;
-        // background-color: red;
     }
 
     .applications-title {
@@ -50,15 +49,14 @@ export const Styles = styled.div`
     }
 
     .card {
-        margin-bottom: 3rem;
         margin-left: 1rem;
         margin-right: 1rem;
         box-sizing: border-box;
-        border: solid 10px steelblue;
+        border: solid 1px steelblue;
         border-radius: 0px;
         background-color: steelblue;
         color: white;
-        box-shadow: 0px 0px 10px black;
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
         font-family: 'Open Sans', sans-serif;
         background-color: #021c37;
         cursor: pointer;
@@ -76,7 +74,6 @@ export const Styles = styled.div`
 
     .card-title {
         padding: 0.75rem;
-        border-radius: 36px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -95,6 +92,19 @@ export const Styles = styled.div`
     .card-text {
         text-align: center;
         margin-top: 1rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    @media only screen and (max-width: 991px) {
+        .card {
+            margin-bottom: 3rem;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .last-card {
+            margin-bottom: 0rem;
+        }
     }
 
     @media only screen and (max-width: 770px) {
@@ -118,20 +128,17 @@ export const Styles = styled.div`
     @media only screen and (max-width: 420px) {
         .card {
             width: 19rem !important;
-            background-color: red;
         }
     }
 
     @media only screen and (max-width: 370px) {
         .card {
             width: 18rem !important;
-            background-color: red;
         }
     }
     @media only screen and (max-width: 340px) {
         .card {
             width: 17rem !important;
-            background-color: red;
         }
     }
 `
@@ -190,7 +197,7 @@ export const Applications = () => (
                     xs={12}
                     className={'d-flex justify-content-center'}
                 >
-                    <Card style={{ width: '25em' }}>
+                    <Card style={{ width: '25em' }} className={'last-card'}>
                         <Card.Img variant="top" src="./images/Old.png" />
                         <Card.Body>
                             <Card.Title>My Old Website</Card.Title>

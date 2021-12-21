@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 export const Styles = styled.div`
     .button-underline {
@@ -9,18 +9,17 @@ export const Styles = styled.div`
         height: 100%;
         width: 0%;
         background-color: #021c37;
-        bottom: 7px;
-        height: 2px;
         transition: all 500ms ease-in-out;
         transform: translateX(50%);
+        bottom: 0px;
         right: 50%;
+        z-index: -1;
     }
 
     .navbar {
         width: 100vw;
         background-color: steelblue;
         padding: 1rem;
-
         box-shadow: 0px 0px 10px black;
     }
 
@@ -37,27 +36,53 @@ export const Styles = styled.div`
         font-family: 'Montserrat', sans-serif;
     }
 
+    .navbar-light .navbar-nav .nav-link:focus,
+    .navbar-light .navbar-nav .nav-link:active {
+        outline: none;
+    }
+
     .navbar-light .navbar-nav .nav-link:hover .button-underline {
-        width: 80%;
+        width: 100%;
     }
 
     .navbar-light .navbar-toggler {
-        color: white;
+        color: #021c37;
         border-color: #021c37;
         outline: none;
         transition: none;
     }
 
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
     .navbar-light .navbar-toggler:active {
         outline: none;
+        color: #021c37;
+    }
+
+    .navbar-light {
+        color: orange;
     }
 
     @media only screen and (max-width: 990px) {
-        .navbar {
+        .navbar-light .navbar-nav .nav-link {
+            text-align: center;
+            width: 100vw;
+            margin-left: -16px;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover {
+            background-color: #021c37;
+            text-align: center;
         }
 
         .button-underline {
             display: none;
+        }
+
+        .first-link {
+            margin-top: 0.71rem;
         }
     }
 `
@@ -66,10 +91,13 @@ export const Menu = () => (
     <Styles>
         <Navbar className={'fixed-top'} collapseOnSelect expand="lg">
             <Navbar.Brand href="#home">cBrixey</Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Toggle aria-controls="responsive-navbar-nav">
+                <GiHamburgerMenu></GiHamburgerMenu>
+            </Navbar.Toggle>
+
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="#applications">
+                    <Nav.Link href="#applications" className={'first-link'}>
                         <div className={'button-underline'}></div>APPLICATIONS
                     </Nav.Link>
                     <Nav.Link href="#youtube">

@@ -4,7 +4,6 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import { useState } from 'react'
 import React from 'react'
 
 const Styles = styled.div`
@@ -158,7 +157,7 @@ export const Contact = () => {
         window.emailjs
             .send(serviceID, templateId, variables)
             .then((res) => {
-                console.log('Email successfully sent!')
+                // console.log('Email successfully sent!')
             })
             .catch((err) => console.error('There has been an Error.', err))
     }

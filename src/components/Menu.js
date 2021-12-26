@@ -9,7 +9,11 @@ const Menu = () => {
         <div>
             <Navbar className={'fixed-top'} collapseOnSelect expand="lg">
                 <Navbar.Brand href="#home">
-                    <img src="./images/logo.png" className={'logo'}></img>
+                    <img
+                        src="./images/logo.png"
+                        className={'logo'}
+                        alt="logo"
+                    ></img>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav">
                     <GiHamburgerMenu></GiHamburgerMenu>

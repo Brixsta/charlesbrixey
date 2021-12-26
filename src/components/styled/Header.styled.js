@@ -7,10 +7,22 @@ import Container from 'react-bootstrap/Container'
 export const Styles = styled.div`
     header {
         width: 100vw;
-        height: 91vh;
+        height: 100vh;
         background-size: cover;
         position: relative;
         padding-top: 5rem;
+    }
+
+    .reflection {
+        width: 100vw;
+        height: 100vh;
+        background-color: red;
+        background-size: cover;
+        transform: rotate(-180deg) scaleX(-1);
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        position: absolute;
+        filter: blur(1px);
     }
 `
 
@@ -24,6 +36,12 @@ export const Header = () => (
                             backgroundImage: `url("./images/header.png")`,
                         }}
                     ></header>
+                    <div
+                        className={'reflection'}
+                        style={{
+                            backgroundImage: `url("./images/header.png")`,
+                        }}
+                    ></div>
                 </Col>
             </Row>
         </Container>

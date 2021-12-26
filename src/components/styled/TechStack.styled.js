@@ -8,50 +8,6 @@ import { FaPalette } from 'react-icons/fa'
 import { SiMaterialdesignicons } from 'react-icons/si'
 
 const Styles = styled.div`
-    .techstack-title-container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100vw;
-    }
-
-    .techstack-title {
-        margin: 5rem 0rem;
-        font-size: 3rem;
-        font-family: 'Montserrat', sans-serif;
-        z-index: 100;
-        background-color: steelblue;
-        color: white;
-        padding: 2rem;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-        user-select: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: fit-content;
-    }
-
-    .techstack-line-left {
-        width: 100%;
-        height: 1px;
-        background-image: linear-gradient(
-            to right,
-            rgba(70, 130, 180, 0),
-            rgba(70, 130, 180, 1)
-        );
-    }
-
-    .techstack-line-right {
-        width: 100%;
-        height: 1px;
-        background-image: linear-gradient(
-            to left,
-            rgba(70, 130, 180, 0),
-            rgba(70, 130, 180, 1)
-        );
-    }
-
     .techstack-bar {
         height: 7rem;
         width: 70%;
@@ -110,7 +66,7 @@ const Styles = styled.div`
         .square-title {
             font-size: 0.7rem;
         }
-        .techstack-title {
+        .section-title {
             font-size: 2rem;
         }
     }
@@ -126,7 +82,7 @@ const Styles = styled.div`
             font-size: 1rem;
         }
 
-        .techstack-title {
+        .section-title {
             font-size: 1rem;
             margin-top: 3rem;
             margin-bottom: 3rem;
@@ -145,18 +101,20 @@ const Styles = styled.div`
 
 export const TechStack = () => (
     <Styles>
-        <Container>
+        <Container fluid>
             <Row>
                 <Col className={'d-flex justify-content-center'}>
-                    <div className={'techstack-title-container'}>
-                        <div className={'techstack-line-left'}></div>
-                        <h1 className={'techstack-title'}>TECH STACK</h1>
-                        <div className={'techstack-line-right'}></div>
+                    <div className={'title-container'}>
+                        <div className={'line-left'}>
+                            <div className={'left-block'}></div>
+                        </div>
+                        <h1 className={'section-title'}>TECH STACK</h1>
+                        <div className={'line-right'}>
+                            <div className={'right-block'}></div>
+                        </div>
                     </div>
                 </Col>
             </Row>
-        </Container>
-        <Container>
             <Row>
                 <Col
                     lg={12}

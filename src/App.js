@@ -10,14 +10,14 @@ import Menu from './components/Menu'
 function App() {
     return (
         <div className="wrapper">
-            <Element name="home"></Element>
+            <Element id="home"></Element>
             <Menu></Menu>
             <Header></Header>
-            <Element name="applications"></Element>
+            <Element id="applications" name="applications"></Element>
             <Applications></Applications>
-            <Element name="techstack"></Element>
+            <Element id="techstack" name="techstack"></Element>
             <TechStack></TechStack>
-            <Element name="contact"></Element>
+            <Element id="contact"></Element>
             <Contact></Contact>
             <Footer></Footer>
         </div>

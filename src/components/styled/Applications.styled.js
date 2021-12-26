@@ -5,49 +5,6 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 
 export const Styles = styled.div`
-    .applications-title-container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100vw;
-    }
-
-    .applications-title {
-        margin: 5rem 0rem;
-        font-size: 3rem;
-        font-family: 'Montserrat', sans-serif;
-        z-index: 100;
-        background-color: steelblue;
-        color: white;
-        padding: 2rem;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-        user-select: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .applications-line-left {
-        width: 100%;
-        height: 1px;
-        background-image: linear-gradient(
-            to right,
-            rgba(70, 130, 180, 0),
-            rgba(70, 130, 180, 1)
-        );
-    }
-
-    .applications-line-right {
-        width: 100%;
-        height: 1px;
-        background-image: linear-gradient(
-            to left,
-            rgba(70, 130, 180, 0),
-            rgba(70, 130, 180, 1)
-        );
-    }
-
     .card {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -63,7 +20,7 @@ export const Styles = styled.div`
         transition: all 300ms ease-in-out;
         overflow: hidden;
         z-index: 100;
-        padding: 1.2rem;
+        padding: 1rem !important;
     }
     .card:hover {
         transform: scale(0.9);
@@ -96,6 +53,10 @@ export const Styles = styled.div`
         font-family: 'Open Sans', sans-serif;
     }
 
+    .card-row {
+        padding: 0rem 2rem;
+    }
+
     @media only screen and (max-width: 991px) {
         .card {
             margin-bottom: 3rem;
@@ -118,13 +79,13 @@ export const Styles = styled.div`
     }
 
     @media only screen and (max-width: 550px) {
-        .applications-title {
+        .section-title {
             font-size: 2rem;
         }
     }
 
     @media only screen and (max-width: 450px) {
-        .applications-title {
+        .section-title {
             font-size: 1rem;
             margin-top: 3rem;
             margin-bottom: 3rem;
@@ -149,19 +110,23 @@ export const Styles = styled.div`
     }
 `
 
-export const Applications = () => (
+export const Applications = (props) => (
     <Styles>
-        <Container>
+        <Container fluid>
             <Row>
                 <Col className={'d-flex justify-content-center'}>
-                    <div className={'applications-title-container'}>
-                        <div className={'applications-line-left'}></div>
-                        <h1 className={'applications-title'}>APPLICATIONS</h1>
-                        <div className={'applications-line-right'}></div>
+                    <div className={'title-container'}>
+                        <div className={'line-left'}>
+                            <div className={'left-block'}></div>
+                        </div>
+                        <h1 className={'section-title'}>APPLICATIONS</h1>
+                        <div className={'line-right'}>
+                            <div className={'right-block'}></div>
+                        </div>
                     </div>
                 </Col>
             </Row>
-            <Row>
+            <Row className={'card-row'}>
                 <Col
                     lg={4}
                     md={6}
@@ -169,7 +134,14 @@ export const Applications = () => (
                     xs={12}
                     className={'d-flex justify-content-around'}
                 >
-                    <Card style={{ width: '25em' }}>
+                    <Card
+                        onClick={() =>
+                            window.open(
+                                `http://boorish-man.surge.sh/`,
+                                '_blank'
+                            )
+                        }
+                    >
                         <Card.Img variant="top" src="./images/Memory.png" />
                         <Card.Body>
                             <Card.Title>WWF MEMORY</Card.Title>
@@ -186,7 +158,7 @@ export const Applications = () => (
                     xs={12}
                     className={'d-flex justify-content-center'}
                 >
-                    <Card style={{ width: '25em' }}>
+                    <Card>
                         <Card.Img variant="top" src="./images/Employee.png" />
                         <Card.Body>
                             <Card.Title>EMPLOYEE FINDER</Card.Title>
@@ -203,7 +175,7 @@ export const Applications = () => (
                     xs={12}
                     className={'d-flex justify-content-center'}
                 >
-                    <Card style={{ width: '25em' }} className={'last-card'}>
+                    <Card className={'last-card'}>
                         <Card.Img variant="top" src="./images/Old.png" />
                         <Card.Body>
                             <Card.Title>MY OLD WEBSITE</Card.Title>

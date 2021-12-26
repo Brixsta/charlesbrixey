@@ -9,10 +9,18 @@ import { AiFillLinkedin } from 'react-icons/ai'
 const Styles = styled.div`
     .container-fluid {
         background-color: steelblue;
-        height: 200px;
         width: 100vw;
         color: #021c37;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -29,6 +37,15 @@ const Styles = styled.div`
         font-size: 5rem;
     }
 
+    h1 {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.7rem;
+    }
+
     @media only screen and (max-width: 510px) {
         svg {
             margin: 0rem 1rem;
@@ -43,12 +60,19 @@ const Styles = styled.div`
             font-size: 3rem;
         }
     }
+
+    @media only screen and (max-width: 450px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
 `
 
 export const Footer = () => (
     <Styles>
         <Container fluid>
             <Row>
+                <h1>SOCIAL MEDIA</h1>
                 <Col>
                     <AiFillGithub
                         onClick={() =>

@@ -175,7 +175,15 @@ export const Applications = (props) => (
                     xs={12}
                     className={'d-flex justify-content-center'}
                 >
-                    <Card className={'last-card'}>
+                    <Card
+                        onClick={() =>
+                            window.open(
+                                `http://numberless-dog.surge.sh/`,
+                                '_blank'
+                            )
+                        }
+                        className={'last-card'}
+                    >
                         <Card.Img variant="top" src="./images/Old.png" />
                         <Card.Body>
                             <Card.Title>MY OLD WEBSITE</Card.Title>

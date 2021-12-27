@@ -60,7 +60,7 @@
     transition: none;
 }
 
-.navbar-toggler:focus {
+.navbar-light .navbar-toggler:focus {
     box-shadow: none;
 }
 

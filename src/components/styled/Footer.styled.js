@@ -14,8 +14,7 @@ const Styles = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1rem;
-        padding-bottom: 2rem;
+        padding: 2rem;
     }
 
     .row {
@@ -35,7 +34,6 @@ const Styles = styled.div`
         display: flex;
         padding: 1rem;
         font-size: 5rem;
-        margin-top: 1rem;
     }
 
     @media only screen and (max-width: 510px) {

@@ -35,15 +35,7 @@ const Styles = styled.div`
         display: flex;
         padding: 1rem;
         font-size: 5rem;
-    }
-
-    h1 {
-        padding: 0;
-        margin: 0;
-        text-align: center;
-        margin-bottom: 1rem;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.7rem;
+        margin-top: 1rem;
     }
 
     @media only screen and (max-width: 510px) {
@@ -55,24 +47,12 @@ const Styles = styled.div`
             font-size: 4rem;
         }
     }
-    @media only screen and (max-width: 360px) {
-        .col {
-            font-size: 3rem;
-        }
-    }
-
-    @media only screen and (max-width: 450px) {
-        h1 {
-            font-size: 1.5rem;
-        }
-    }
 `
 
 export const Footer = () => (
     <Styles>
         <Container fluid>
             <Row>
-                <h1>SOCIAL MEDIA</h1>
                 <Col>
                     <AiFillGithub
                         onClick={() =>

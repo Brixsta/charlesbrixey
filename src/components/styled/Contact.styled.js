@@ -215,7 +215,7 @@ export const Contact = () => {
                                 as={Col}
                                 controlId="formGridName"
                             >
-                                <Form.Label>Name</Form.Label>
+                                <Form.Label>NAME</Form.Label>
                                 <Form.Control
                                     name="name"
                                     type="name"
@@ -228,7 +228,7 @@ export const Contact = () => {
                                 as={Col}
                                 controlId="formGridEmail"
                             >
-                                <Form.Label>Email</Form.Label>
+                                <Form.Label>EMAIL</Form.Label>
                                 <Form.Control
                                     name="email"
                                     type="email"
@@ -240,7 +240,7 @@ export const Contact = () => {
                                 as={Col}
                                 id="formGridQuery"
                             >
-                                <Form.Label>Message</Form.Label>
+                                <Form.Label>MESSAGE</Form.Label>
                                 <Form.Control
                                     name="message"
                                     as="textarea"

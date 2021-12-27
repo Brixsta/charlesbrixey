@@ -219,7 +219,7 @@ export const Contact = () => {
                                 <Form.Control
                                     name="name"
                                     type="name"
-                                    placeholder="Name"
+                                    placeholder="Enter name"
                                 />
                             </Form.Group>
 
@@ -232,7 +232,7 @@ export const Contact = () => {
                                 <Form.Control
                                     name="email"
                                     type="email"
-                                    placeholder="Enter email"
+                                    placeholder="Enter mail"
                                 />
                             </Form.Group>
                             <Form.Group

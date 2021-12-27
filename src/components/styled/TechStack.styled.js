@@ -10,7 +10,7 @@ import { GiCutDiamond } from 'react-icons/gi'
 
 const Styles = styled.div`
     .techstack-bar {
-        min-height: 7rem;
+        height: 7rem;
         width: 70%;
         margin-bottom: 2rem;
         display: flex;
@@ -90,6 +90,7 @@ const Styles = styled.div`
         }
         .techstack-bar-content {
             width: 55%;
+            font-size: 0.8rem;
         }
         .techstack-square {
             width: 45%;

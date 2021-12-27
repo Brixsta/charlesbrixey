@@ -137,7 +137,7 @@ export const Applications = (props) => (
                     <Card
                         onClick={() =>
                             window.open(
-                                `http://boorish-man.surge.sh/`,
+                                `https://boorish-man.surge.sh/`,
                                 '_blank'
                             )
                         }
@@ -178,7 +178,7 @@ export const Applications = (props) => (
                     <Card
                         onClick={() =>
                             window.open(
-                                `http://numberless-dog.surge.sh/`,
+                                `https://numberless-dog.surge.sh/`,
                                 '_blank'
                             )
                         }

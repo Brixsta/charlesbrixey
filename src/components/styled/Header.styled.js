@@ -16,7 +16,6 @@ export const Styles = styled.div`
     .reflection {
         width: 100vw;
         height: 100vh;
-        background-color: red;
         background-size: cover;
         transform: rotate(-180deg) scaleX(-1);
         background-repeat: no-repeat;

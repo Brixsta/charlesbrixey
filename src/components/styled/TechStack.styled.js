@@ -6,6 +6,7 @@ import { VscServerEnvironment } from 'react-icons/vsc'
 import { IconContext } from 'react-icons'
 import { FaPalette } from 'react-icons/fa'
 import { SiMaterialdesignicons } from 'react-icons/si'
+import { GiCutDiamond } from 'react-icons/gi'
 
 const Styles = styled.div`
     .techstack-bar {
@@ -20,7 +21,7 @@ const Styles = styled.div`
 
     .techstack-square {
         height: 100%;
-        width: 30%;
+        width: 35%;
         background-color: transparent;
         z-index: 100;
         border-right: 1px solid steelblue;
@@ -171,7 +172,7 @@ export const TechStack = () => (
                         'd-flex align-items-center justify-content-center'
                     }
                 >
-                    <div className={'techstack-bar last-bar'}>
+                    <div className={'techstack-bar'}>
                         <div className={'techstack-square'}>
                             <IconContext.Provider
                                 value={{ color: 'white', size: '40%' }}
@@ -182,6 +183,32 @@ export const TechStack = () => (
                         </div>
                         <div className={'techstack-bar-content'}>
                             React, D3, Bootstrap.
+                        </div>
+                    </div>
+                </Col>
+                <Col
+                    lg={12}
+                    md={12}
+                    sm={12}
+                    xs={12}
+                    className={
+                        'd-flex align-items-center justify-content-center'
+                    }
+                >
+                    <div className={'techstack-bar last-bar'}>
+                        <div className={'techstack-square'}>
+                            <IconContext.Provider
+                                value={{ color: 'white', size: '40%' }}
+                            >
+                                <GiCutDiamond></GiCutDiamond>
+                            </IconContext.Provider>
+                            <span className={'square-title'}>
+                                MISCELLANEOUS
+                            </span>
+                        </div>
+                        <div className={'techstack-bar-content'}>
+                            EmailJS, Styled Components, Intersection Observer,
+                            React Scroll.
                         </div>
                     </div>
                 </Col>

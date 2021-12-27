@@ -52,7 +52,6 @@ const Styles = styled.div`
         padding: 0.8rem 5rem;
         border-radius: 0;
         cursor: pointer;
-        transition: all 300ms ease-in-out;
     }
 
     button:focus,
@@ -66,15 +65,13 @@ const Styles = styled.div`
         padding: 0.8rem 5rem;
         border-radius: 0;
         cursor: pointer;
-        transition: all 300ms ease-in-out;
         outline: none;
     }
 
     button:hover {
         background-color: transparent;
-        transform: scale(0.9);
         box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
-        border: solid 1px steelblue;
+        border: solid 1px white;
     }
 
     @media only screen and (max-width: 720px) {

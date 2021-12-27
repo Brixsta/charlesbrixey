@@ -17,13 +17,13 @@ export const Styles = styled.div`
         font-family: 'Open Sans', sans-serif;
         background-color: #021c37;
         cursor: pointer;
-        transition: all 300ms ease-in-out;
+        transition: all 100ms linear;
         overflow: hidden;
         z-index: 100;
         padding: 1rem !important;
     }
     .card:hover {
-        transform: scale(0.9);
+        border: solid 1px white;
     }
 
     .card-title {

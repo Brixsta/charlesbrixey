@@ -137,7 +137,7 @@ export const Applications = (props) => (
                     <Card
                         onClick={() =>
                             window.open(
-                                `https://boorish-man.surge.sh/`,
+                                `https://wrathful-stage.surge.sh`,
                                 '_blank'
                             )
                         }

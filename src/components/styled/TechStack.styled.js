@@ -97,10 +97,6 @@ const Styles = styled.div`
         .square-title {
             font-size: 0.7rem;
         }
-        svg {
-            height: 2rem;
-            width: 2rem;
-        }
     }
 `
 

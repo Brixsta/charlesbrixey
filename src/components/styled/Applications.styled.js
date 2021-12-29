@@ -158,7 +158,14 @@ export const Applications = (props) => (
                     xs={12}
                     className={'d-flex justify-content-center'}
                 >
-                    <Card onClick={() => alert('Coming Soon!')}>
+                    <Card
+                        onClick={() =>
+                            window.open(
+                                `https://whispering-queen.surge.sh/`,
+                                '_blank'
+                            )
+                        }
+                    >
                         <Card.Img variant="top" src="./images/Employee.png" />
                         <Card.Body>
                             <Card.Title>EMPLOYEE FINDER</Card.Title>

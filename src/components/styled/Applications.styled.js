@@ -161,7 +161,7 @@ export const Applications = (props) => (
                     <Card
                         onClick={() =>
                             window.open(
-                                `https://whispering-queen.surge.sh/`,
+                                `https://teeny-guitar.surge.sh`,
                                 '_blank'
                             )
                         }

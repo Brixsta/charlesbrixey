@@ -136,7 +136,7 @@ export const TechStack = () => (
                             <span className={'square-title'}>FRONTEND</span>
                         </div>
                         <div className={'techstack-bar-content'}>
-                            Javascript, UI/UX, HTML 5, CSS.
+                            Javascript, UI/UX, HTML 5, CSS, Flexbox.
                         </div>
                     </div>
                 </Col>
